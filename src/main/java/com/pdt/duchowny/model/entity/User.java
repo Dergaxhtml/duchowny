@@ -1,4 +1,4 @@
-package com.pdt.duchowny.entity;
+package com.pdt.duchowny.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +20,9 @@ public class User {
   private String username;
   @Column
   private String password;
-  @Enumerated(EnumType.ORDINAL)
-  private RoleUser role;
+  @Enumerated(EnumType.STRING)
+  private Role role=Role.USER;
+
+
 
 }
